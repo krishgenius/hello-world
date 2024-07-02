@@ -5,7 +5,7 @@ context:
 projects:
   - project-name: "PROJ_180_POC"
     project-id: "73"
-    account-name: "TabDnA team"
+    account-name: "BT Sandbox"
     account-id: "8"
     account-host: "cloud.salesforce.getdbt.com"
     token-name: "cloud-cli-ad28"

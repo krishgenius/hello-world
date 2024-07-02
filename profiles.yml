@@ -1,4 +1,5 @@
 PROJ_180_POC:
+  target: dev
   outputs:
     dev:
       account: sfdc-dp-preprd
@@ -10,5 +11,5 @@ PROJ_180_POC:
       type: snowflake
       user: SVC_EDW_ODS_ETL_DEV
       warehouse: WH_EDW_ODS_ETL_DEV
-  target: dev
+  
  

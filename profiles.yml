@@ -4,15 +4,6 @@ PROJ_180_POC:
     dev:
       account: sfdc-dp-preprd
       user: SVC_EDW_ODS_ETL_DEV
-<<<<<<< HEAD
       password: Salesforce@123
       threads: 1
       type: snowflake
- 
- 
-=======
-      threads: 1
-      type: snowflake
-
- 
->>>>>>> e9fcefd5a96fded254a4c4a7ca9416d443c06eb8

@@ -11,4 +11,3 @@ PROJ_180_POC:
       user: SVC_EDW_ODS_ETL_DEV
       warehouse: WH_EDW_ODS_ETL_DEV
   target: dev
- 

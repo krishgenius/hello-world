@@ -5,11 +5,7 @@ PROJ_180_POC:
       account: sfdc-dp-preprd
       user: SVC_EDW_ODS_ETL_DEV
       password: Salesforce@123
-      database: EDW_ODS_DEV
-      role: EDW_ODS_ETL_DEV
-      schema: ORG62
       threads: 1
       type: snowflake
-      warehouse: WH_EDW_ODS_ETL_DEV
-  
+ 
  

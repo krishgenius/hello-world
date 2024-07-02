@@ -4,11 +4,11 @@ PROJ_180_POC:
       account: sfdc-dp-preprd
       authenticator: externalbrowser
       database: EDW_ODS_DEV
-      role: DEVLPR_FTE_DEV
+      role: EDW_ODS_ETL_DEV
       schema: ORG62
       threads: 1
       type: snowflake
       user: SVC_EDW_ODS_ETL_DEV
-      warehouse: WH_EDW_ODS_DEV
+      warehouse: WH_EDW_ODS_ETL_DEV
   target: dev
  

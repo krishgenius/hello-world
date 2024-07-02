@@ -10,7 +10,6 @@ PROJ_180_POC:
       schema: ORG62
       threads: 1
       type: snowflake
-      
       warehouse: WH_EDW_ODS_ETL_DEV
   
  

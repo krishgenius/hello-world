@@ -1,6 +1,6 @@
-with acct_cols as (select id, name from ods_account)
+with acct_cols as (select acct_id, acct_nm from edw_dm_dev.common.dim_account)
 select *
 from acct_cols
-where length(name) > 20
+where length(acct_nm) > 20
 
 

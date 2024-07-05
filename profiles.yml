@@ -11,3 +11,14 @@ PROJ_180_POC:
       user: SVC_EDW_DM_ETL_DEV
       warehouse: WH_EDW_DM_ETL_DEV
   target: dev
+  prod:
+      account: sfdc-dp-preprd
+      authenticator: externalbrowser
+      database: EDW_DM_DEV
+      role: EDW_DM_ETL_DEV
+      schema: COMMON
+      threads: 1
+      type: snowflake
+      user: SVC_EDW_DM_ETL_DEV
+      warehouse: WH_EDW_DM_ETL_DEV
+  target: prod

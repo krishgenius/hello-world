@@ -1,6 +1,7 @@
-with acct_cols as (select id, name from edw_ods_dev.org62.ods_account)
+{{config(materialized='table')}}
+with acct_cols as (select acct_id, acct_nm from edw_dm_dev.common.dim_account)
 select *
 from acct_cols
-where length(name) > 20
+where length(acct_nm) > 20
 
 

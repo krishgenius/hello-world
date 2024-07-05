@@ -32,4 +32,4 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   PROJ_180_POC:
       first_model: # Config indicated by + and applies to all files under models/example/
-        materialized: table
+        

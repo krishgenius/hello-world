@@ -10,7 +10,6 @@ with source_data as (
     {% if is_incremental() %}
     where audit_etl_job_upd_ts > (select max(audit_etl_job_upd_ts) from {{ this }})
     {% endif %}
-   
 )
 
 {% if is_incremental() %}
@@ -26,7 +25,6 @@ when matched then
 when not matched then
     insert (id, name, audit_etl_job_upd_ts)
     values (source.id, source.name, current_timestamp());
-
 
 {% else %}
 

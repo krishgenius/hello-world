@@ -7,22 +7,25 @@ with source_data as (
         *
     from edw_ods_dev.org62.ods_opportunity
     {% if is_incremental() %}
-    where updated_at > (select max(updated_at) from {{ this }})
+    where audit_etl_job_upd_ts > (select max(audit_etl_job_upd_ts) from {{ this }})
     {% endif %}
    
 )
 
 {% if is_incremental() %}
 -- Step 1: Delete matching records from the target table
-delete from {{ this }}
-where id in (select id from source_data);
 
--- Step 2: Insert new and updated records into the target table
-insert into {{ this }} (
-    select
-       *
-    from source_data
-);
+merge into {{ this }} as target
+using source_data as source
+on target.id = source.id
+when matched then
+    update set
+        name = source.name,
+        audit_etl_job_upd_ts = current_time()
+when not matched then
+    insert (id, name, audit_etl_job_upd_ts)
+    values (source.id, source.name, current_time());
+
 
 {% else %}
 

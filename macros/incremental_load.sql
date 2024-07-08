@@ -7,9 +7,7 @@ with source_data as (
     where {{ audit_etl_job_upd_ts }} > (select max({{ nvl(dbt_updated_dt,'1-jan-1900') }}) from {{ target_table }})
     {% endif %}
 )
-
 select
     *
 from source_data
-
 {% endmacro %}

@@ -1,5 +1,10 @@
 {% macro incremental_load(source_table, target_table, unique_key, updated_at) %}
 
+{{ config(
+    materialized='incremental',
+    unique_key={{unique_key}}
+) }}
+
 with source_data as (
     select *, current_timestamp() as dbt_updated_dt
     from {{ source_table }}

@@ -9,7 +9,7 @@ with source_data as (
     from edw_ods_dev.org62.ods_opportunity)
     select * from source_data 
     {% if is_incremental() %}
-    where audit_etl_job_upd_ts > (select max({{ this }}.dbt_updated_dt) from {{ this }})
+    where audit_etl_job_upd_ts > (select NVL(max({{ this }}.dbt_updated_dt),'1-JAN-1900') from {{ this }})
     {% endif %}
 
 

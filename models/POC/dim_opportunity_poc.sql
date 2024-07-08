@@ -2,6 +2,7 @@
     materialized='incremental',
     unique_key='id'
 ) }}
+
 with source_data as (
     select
         *
@@ -21,10 +22,10 @@ on target.id = source.id
 when matched then
     update set
         name = source.name,
-        audit_etl_job_upd_ts = current_time()
+        audit_etl_job_upd_ts = current_timestamp()
 when not matched then
     insert (id, name, audit_etl_job_upd_ts)
-    values (source.id, source.name, current_time());
+    values (source.id, source.name, current_timestamp());
 
 
 {% else %}

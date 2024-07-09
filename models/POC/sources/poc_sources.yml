@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: poc_source
+    database: edw_ods_dev
+    schema: org62
+    tables:
+      - name: ods_account

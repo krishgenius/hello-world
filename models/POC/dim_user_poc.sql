@@ -1,4 +1,10 @@
---{{ config(materialized='incremental', unique_key='id') }}
+{{
+    config(
+        materialized='incremental',
+        unique_key='id'
+    )
+}}
+
 {{
     incremental_load(
         source_table="edw_ods_dev.org62.ods_user",
@@ -7,3 +13,5 @@
         updated_at="dbt_updated_dt",
     )
 }}
+
+

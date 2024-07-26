@@ -14,7 +14,7 @@ with source_data as (
 select
     id,
     name,
-    {{ my_new_project.isdeleted(del_flg)}} as isdeleted,
-    {{my_new_project.conversion_required(currencyisocode)}} as conversion_required
+    {{ finance_macros.isdeleted(del_flg)}} as isdeleted,
+    {{finance_macros.conversion_required(currencyisocode)}} as conversion_required
 from source_data
  

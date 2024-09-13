@@ -1,0 +1,1 @@
+select * from data360_poc.customer limit 10

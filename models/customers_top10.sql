@@ -1,1 +1,1 @@
-select * from customer   where c_name like'Customer#001065%'
+select * from data360_poc.ods.customer   where c_name like'Customer#001065%'

@@ -1,1 +1,1 @@
-select * from data360_poc.customer limit 10
+select * from customer   where c_name like'Customer#001065%'

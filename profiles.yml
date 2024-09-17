@@ -29,9 +29,9 @@ DBT_engg_training:
       authenticator: externalbrowser
       database: DATA360_POC
       role: DATA360_ETL_POC
-      schema: ODS
+      schema: EORENSE_DBT
       threads: 1
       type: snowflake
-      user: SVC_D360_ETL_POC
+      user: edric.orense
       warehouse: DEMO_WH
   target: dev 

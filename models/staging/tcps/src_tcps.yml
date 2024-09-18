@@ -1,0 +1,8 @@
+sources:
+  - name: tcps
+    database: snowflake_Sample_data  
+    schema: TPCDS_SF100TCL
+    tables:
+      - name: inventory
+      - name: item
+      - name: warehouse  

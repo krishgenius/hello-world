@@ -1,0 +1,37 @@
+PROJ_180_POC:
+  outputs:
+    dev:
+      account: sfdc-dp-preprd
+      authenticator: externalbrowser
+      database: EDW_DM_DEV
+      role: EDW_DM_ETL_DEV
+      schema: COMMON
+      threads: 1
+      type: snowflake
+      user: SVC_EDW_DM_ETL_DEV
+      warehouse: WH_EDW_DM_ETL_DEV
+  target: dev
+  prod:
+      account: sfdc-dp-preprd
+      authenticator: externalbrowser
+      database: EDW_DM_DEV
+      role: EDW_DM_ETL_DEV
+      schema: COMMON
+      threads: 1
+      type: snowflake
+      user: SVC_EDW_DM_ETL_DEV
+      warehouse: WH_EDW_DM_ETL_DEV
+  target: prod
+DBT_engg_training:
+  outputs:
+    dev:
+      account: salesforce-poc
+      authenticator: externalbrowser
+      database: DATA360_POC
+      role: DATA360_ETL_POC
+      schema: RYARLAGADDA_DBT
+      threads: 1
+      type: snowflake
+      user: RAJESH.YARLAGADDA
+      warehouse: DEMO_WH
+  target: dev 

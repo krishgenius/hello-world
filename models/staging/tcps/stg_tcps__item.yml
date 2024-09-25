@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_tcps__item
+    description: "item table - snowflake POC data"
+    columns:
+      - name: i_item_sk
+        description: "surrogate key identifying items"
+        tests:
+          - unique
+          - not_null
+ 

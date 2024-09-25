@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: sample_dia
+    columns:
+      - name: skey
+        tests:
+          - unique
+          - not_null
+ 

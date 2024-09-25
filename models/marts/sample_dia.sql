@@ -23,6 +23,7 @@ FROM
 inventory iv
 JOIN item i ON iv.inv_item_sk = i.i_item_sk
 JOIN warehouse w ON iv.inv_warehouse_sk = w.w_warehouse_sk
+where 
 GROUP BY w.w_warehouse_name, i.i_category,w.w_warehouse_name || i.i_category
 )
 -- FINAL SELECT 

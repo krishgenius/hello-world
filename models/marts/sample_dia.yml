@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 version: 2
 
 models:
@@ -9,3 +10,15 @@ models:
           - not_null
 
 
+=======
+version: 2
+
+models:
+  - name: sample_dia
+    columns:
+      - name: skey
+        tests:
+          - unique
+          - not_null
+ 
+>>>>>>> ff851a2526228fa7482cc1a9ffd83524efc68a86

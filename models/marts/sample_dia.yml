@@ -15,8 +15,10 @@ version: 2
 
 models:
   - name: sample_dia
+    description: "this combines item, warehouse and inventory"
     columns:
       - name: skey
+        description: "derived hash column on item and warehouse id"
         tests:
           - unique
           - not_null

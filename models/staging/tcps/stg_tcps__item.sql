@@ -5,7 +5,6 @@ source as (
     select * from {{ source('tcps', 'item') }}
 
 ),
-
 renamed as (
 
     select

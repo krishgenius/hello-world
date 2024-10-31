@@ -1,0 +1,1 @@
+select * from data360_poc.ods.customer   where c_name like'Customer#001065%'

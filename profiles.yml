@@ -22,3 +22,16 @@ PROJ_180_POC:
       user: SVC_EDW_DM_ETL_DEV
       warehouse: WH_EDW_DM_ETL_DEV
   target: prod
+DBT_engg_training:
+  outputs:
+    dev:
+      account: salesforce-poc
+      authenticator: externalbrowser
+      database: DATA360_POC
+      role: DATA360_ETL_POC
+      schema: RYARLAGADDA_DBT
+      threads: 1
+      type: snowflake
+      user: RAJESH.YARLAGADDA
+      warehouse: DEMO_WH
+  target: dev 
